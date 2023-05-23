@@ -18,6 +18,7 @@
 					type="password"
 					label="Password"
 					name="password"
+					placeholder="Your password"
 					required
 					wrapper-styles="mb-8"
 				/>
