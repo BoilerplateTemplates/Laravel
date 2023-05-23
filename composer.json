@@ -1,6 +1,8 @@
 {
-  "name": "BoilerplateTemplates/Laravel",
+  "name": "boilerplate-templates/laravel",
+  "version": "0.0.1",
   "description": "Boilerplate Templates - Laravel",
+  "homepage": "https://github.com/BoilerplateTemplates/Laravel",
   "authors": [
     {
       "name": "Chris Southam",
@@ -8,7 +10,6 @@
       "homepage": "https://github.com/BoilerplateTemplates/Laravel"
     }
   ],
-  "version": "1.0.0",
   "require": {
     "php": "^8.2",
     "archtechx/laravel-seo": "^0.6.0",

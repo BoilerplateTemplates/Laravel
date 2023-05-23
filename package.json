@@ -1,5 +1,8 @@
 {
-  "private": true,
+  "name": "boilerplatetemplates-ionic-angular",
+  "version": "0.0.1",
+  "author": "Boilerplate Templates - Ionic Angular",
+  "homepage": "https://github.com/BoilerplateTemplates/Ionic-Angular",
   "scripts": {
     "dev": "vite",
     "watch": "vite --cors",
