@@ -1,0 +1,111 @@
+{
+  "name": "BoilerplateTemplates/Laravel",
+  "description": "Boilerplate Templates - Laravel",
+  "authors": [
+    {
+      "name": "Chris Southam",
+      "email": "chris@cjsoutham.com",
+      "homepage": "https://github.com/BoilerplateTemplates/Laravel"
+    }
+  ],
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.2",
+    "archtechx/laravel-seo": "^0.6.0",
+    "asdh/laravel-flatpickr": "*",
+    "aws/aws-sdk-php": "^3.260",
+    "doctrine/dbal": "^3.6",
+    "guzzlehttp/guzzle": "^7.2",
+    "laravel/framework": "^10.0",
+    "laravel/sanctum": "^3.2",
+    "laravel/socialite": "^5.6",
+    "laravel/tinker": "^2.8",
+    "livewire/livewire": "^2.12",
+    "predis/predis": "^2.1",
+    "prinsfrank/standards": "^1.5",
+    "spatie/laravel-google-fonts": "*",
+    "spatie/laravel-ignition": "^2.0",
+    "stripe/stripe-php": "^10.7",
+    "tuupola/ksuid": "^2.1",
+    "tuytoosh/active": "^1.8",
+    "usernotnull/tall-toasts": "^1.6",
+    "webfox/laravel-backed-enums": "^1.2",
+    "wireui/phosphoricons": "^1.2"
+  },
+  "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.8",
+    "barryvdh/laravel-ide-helper": "^2.13",
+    "creagia/laravel-web-mailer": "^1.0",
+    "fakerphp/faker": "^1.9.1",
+    "laravel/dusk": "^7.7",
+    "laravel/pint": "^1.0",
+    "laravel/telescope": "^4.14",
+    "mockery/mockery": "^1.4.4",
+    "nunomaduro/collision": "^7.0",
+    "phpunit/phpunit": "^10.0",
+    "spatie/laravel-stubs": "^2.5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi",
+      "@php artisan vendor:publish --force --tag=livewire:assets --ansi",
+      "@php artisan clear-compiled"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi",
+      "@php artisan ide-helper:generate"
+    ],
+    "post-update-cmd": [
+      "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+      "@php artisan config:clear",
+      "@php artisan cache:clear",
+      "@php artisan route:clear",
+      "@php artisan view:clear",
+      "@php artisan clear-compiled",
+      "@php artisan livewire:publish --assets",
+      "@php artisan telescope:publish --ansi",
+      "@php artisan google-fonts:fetch",
+      "@php artisan telescope:clear",
+      "@php artisan ide-helper:generate",
+      "@php artisan ide-helper:meta",
+      "@php artisan ide-helper:models --nowrite",
+      "./vendor/bin/pint",
+      "@php artisan route:cache",
+      "@php artisan route:clear"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+        "laravel/telescope"
+      ]
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

@@ -1,0 +1,37 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+
+class {{ class }}
+{
+    public function index(Request $request)
+    {
+    }
+
+    public function create(Request $request)
+    {
+    }
+
+    public function store(Request $request)
+    {
+    }
+
+    public function show(Request $request, {{ model }} ${{ modelVariable }})
+    {
+    }
+
+    public function edit(Request $request, {{ model }} ${{ modelVariable }})
+    {
+    }
+
+    public function update(Request $request, {{ model }} ${{ modelVariable }})
+    {
+    }
+
+    public function destroy(Request $request, {{ model }} ${{ modelVariable }})
+    {
+    }
+}
